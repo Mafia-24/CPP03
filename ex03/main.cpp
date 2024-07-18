@@ -3,21 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ymafaman <ymafaman@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mafia <mafia@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 01:56:26 by ymafaman          #+#    #+#             */
-/*   Updated: 2024/07/16 22:42:31 by ymafaman         ###   ########.fr       */
+/*   Updated: 2024/07/18 02:41:14 by mafia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#include "ScavTrap.hpp"
+#include "DiamondTrap.hpp"
 
 
 int main()
 {
-
-	ClapTrap* s = new ScavTrap();
-
-	delete s;
+	DiamondTrap d;
 }

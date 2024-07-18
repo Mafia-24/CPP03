@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ymafaman <ymafaman@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mafia <mafia@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 02:53:23 by ymafaman          #+#    #+#             */
-/*   Updated: 2024/07/17 02:38:28 by ymafaman         ###   ########.fr       */
+/*   Updated: 2024/07/18 00:06:59 by mafia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,10 @@ public :
 	// Public memeber functions
 	void	highFivesGuys( void );
 
+	// Base class memeber functions overriding 
+	void	attack( const std::string& target );
+	void	takeDamage( unsigned int amount );
+	void	beRepaired( unsigned int amount );
 };
 
 
