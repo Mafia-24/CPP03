@@ -6,7 +6,7 @@
 /*   By: ymafaman <ymafaman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 00:44:22 by ymafaman          #+#    #+#             */
-/*   Updated: 2024/07/16 22:43:54 by ymafaman         ###   ########.fr       */
+/*   Updated: 2024/07/19 05:02:08 by ymafaman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,9 @@ public :
 	unsigned int	get_attack_damage( void ) const;
 	
 	// Public memeber functions
-	void	attack( const std::string& target );
-	void	takeDamage( unsigned int amount );
-	void	beRepaired( unsigned int amount );
+	virtual void	attack( const std::string& target );
+	virtual void	takeDamage( unsigned int amount );
+	virtual	void	beRepaired( unsigned int amount );
 	
 protected :
 

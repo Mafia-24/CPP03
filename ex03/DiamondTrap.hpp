@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mafia <mafia@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ymafaman <ymafaman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 02:36:02 by ymafaman          #+#    #+#             */
-/*   Updated: 2024/07/18 02:39:21 by mafia            ###   ########.fr       */
+/*   Updated: 2024/07/19 05:56:19 by ymafaman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
 
-class DiamondTrap : public FragTrap, public ScavTrap
+class DiamondTrap : public ScavTrap, public FragTrap
 {
 
 public :
@@ -34,9 +34,21 @@ public :
 	void	takeDamage( unsigned int amount );
 	void	beRepaired( unsigned int amount );
 
+	// Setters redefinition
+	// void	set_name( std::string name );
+	// void	set_hit_points( unsigned int hp );
+	// void	set_energy_points( unsigned int energy_points );
+	// void	set_attack_damage( unsigned int ad );
+
+	// // Getters redefinition
+	// std::string		get_name( void ) const;
+	// unsigned int	get_hit_points( void ) const;
+	// unsigned int	get_energy_points( void ) const;
+	// unsigned int	get_attack_damage( void ) const;
+
 private :
 
-	std::string name;
+	std::string _name;
 };
 
 

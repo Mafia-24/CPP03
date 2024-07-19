@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   DiamondTrap.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mafia <mafia@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ymafaman <ymafaman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/18 01:18:47 by mafia             #+#    #+#             */
-/*   Updated: 2024/07/18 03:10:40 by mafia            ###   ########.fr       */
+/*   Updated: 2024/07/19 06:22:30 by ymafaman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,36 +14,20 @@
 
 DiamondTrap::DiamondTrap ()
 {
-
-    // try to do the following :
-    // FragTrap::_attack_damage
-
-    std::cout << " ddd " << FragTrap::get_attack_damage() << std::endl;
-    
-    FragTrap f;
-    ScavTrap s;
-
     this->_name = "Standard DiamondTrap";
-    this->_hit_points = f.get_hit_points();
-    this->_energy_points = s.get_energy_points();
-    this->_attack_damage = f.get_attack_damage();
-    
+	ClapTrap::_name = "Standard DiamondTrap"; // this because if i don t when attacking the name will be standard fragtrap
+
     std::cout << "DiamondTrap's default constructor has been called!" << std::endl;
 }
 
-DiamondTrap::DiamondTrap( std::string name ) : ClapTrap(name + "_clap_name")
+DiamondTrap::DiamondTrap( std::string name ) : ClapTrap(name + "_clap_name"), ScavTrap(name + "_clap_name"), FragTrap(name + "_clap_name")
 {
-    FragTrap f;
-    ScavTrap s;
-
-    this->_hit_points = f.get_hit_points();
-    this->_energy_points = s.get_energy_points();
-    this->_attack_damage = f.get_attack_damage();
+	this->_name = name;
 
     std::cout << "DiamondTrap's parametrized constructor has been called!" << std::endl;
 }
 
-DiamondTrap::DiamondTrap( const DiamondTrap& ref ) : ClapTrap(ref), FragTrap(ref), ScavTrap(ref)
+DiamondTrap::DiamondTrap( const DiamondTrap& ref ) : ClapTrap(ref), ScavTrap(ref), FragTrap(ref) // ??
 {
     std::cout << "DiamondTrap's copy constructor has been called!" << std::endl;
 }
@@ -61,8 +45,10 @@ DiamondTrap& DiamondTrap::operator=(const DiamondTrap& rhs)
 	{
 		return (*this);
 	}
-    // name
-	this->_name = rhs.get_name();
+
+	ClapTrap::_name = rhs.get_name();
+
+	this->_name = rhs.get_name(); // get_name will return the claptrap name wich has sufix on it so i should redefine the getter.
 	this->_hit_points = rhs.get_hit_points();
 	this->_energy_points = rhs.get_energy_points();
 	this->_attack_damage = rhs.get_attack_damage();

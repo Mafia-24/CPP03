@@ -6,7 +6,7 @@
 /*   By: ymafaman <ymafaman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 00:44:22 by ymafaman          #+#    #+#             */
-/*   Updated: 2024/07/16 01:42:20 by ymafaman         ###   ########.fr       */
+/*   Updated: 2024/07/19 04:53:12 by ymafaman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,12 +41,12 @@ public :
 	unsigned int	get_hit_points( void ) const;
 	unsigned int	get_energy_points( void ) const;
 	unsigned int	get_attack_damage( void ) const;
-	
+
 	// Public memeber functions
 	void	attack( const std::string& target );
 	void	takeDamage( unsigned int amount );
 	void	beRepaired( unsigned int amount );
-	
+
 private :
 
 	std::string		_name;

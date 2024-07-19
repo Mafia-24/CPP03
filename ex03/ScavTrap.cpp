@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mafia <mafia@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ymafaman <ymafaman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 03:16:35 by ymafaman          #+#    #+#             */
-/*   Updated: 2024/07/18 01:39:56 by mafia            ###   ########.fr       */
+/*   Updated: 2024/07/19 06:16:51 by ymafaman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 ScavTrap::ScavTrap( void )
 {
 	this->_name = "Standard ScavTrap";
-	this->_hit_points = 100;
+	this->_hit_points = 100; 
 	this->_energy_points = 50;
 	this->_attack_damage = 20;
 	std::cout << "ScavTrap default constructor has been called!" << std::endl;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mafia <mafia@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ymafaman <ymafaman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 02:53:23 by ymafaman          #+#    #+#             */
-/*   Updated: 2024/07/18 00:06:59 by mafia            ###   ########.fr       */
+/*   Updated: 2024/07/19 05:17:47 by ymafaman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,14 @@ public :
 	void	attack( const std::string& target );
 	void	takeDamage( unsigned int amount );
 	void	beRepaired( unsigned int amount );
+
+	// the getters and setters have to be redefined! // or maby even overriden 
+
+protected :
+
+	unsigned int	_hit_points;
+	unsigned int	_attack_damage;
+
 };
 
 
