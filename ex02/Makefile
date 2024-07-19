@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ymafaman <ymafaman@student.42.fr>          +#+  +:+       +#+         #
+#    By: mafia <mafia@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/16 01:49:45 by ymafaman          #+#    #+#              #
-#    Updated: 2024/07/16 21:31:21 by ymafaman         ###   ########.fr        #
+#    Updated: 2024/07/17 23:07:21 by mafia            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ CPP = c++
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-CPP_FILES = main.cpp ClapTrap.cpp ScavTrap.cpp
+CPP_FILES = main.cpp ClapTrap.cpp FragTrap.cpp
 
 OBJ_FILES = $(CPP_FILES:.cpp=.o)
 
@@ -25,7 +25,7 @@ all : $(NAME)
 $(NAME) : $(OBJ_FILES)
 		$(CPP) $(FLAGS) $(OBJ_FILES) -o $(NAME)
 
-%.o: %.cpp ClapTrap.hpp ScavTrap.hpp
+%.o: %.cpp ClapTrap.hpp FragTrap.hpp
 		$(CPP) $(FLAGS) -c $< -o $@
 
 clean : 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ymafaman <ymafaman@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mafia <mafia@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 00:52:48 by ymafaman          #+#    #+#             */
-/*   Updated: 2024/07/16 22:00:32 by ymafaman         ###   ########.fr       */
+/*   Updated: 2024/07/17 23:31:30 by mafia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@ ClapTrap::~ClapTrap()
 
 ClapTrap& ClapTrap::operator=( const ClapTrap& rhs )
 {
+	std::cout << "ClapTrap assignment operator has been called!" << std::endl;
+
 	if (this == &rhs)
 	{
 		return (*this);

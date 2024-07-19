@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ymafaman <ymafaman@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mafia <mafia@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 00:52:48 by ymafaman          #+#    #+#             */
-/*   Updated: 2024/07/19 05:45:26 by ymafaman         ###   ########.fr       */
+/*   Updated: 2024/07/19 04:12:59 by mafia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 ClapTrap::ClapTrap( void ) : _name("Standard ClapTrap"), _hit_points(10), _energy_points(10), _attack_damage(0)
 {
 	std::cout << "ClapTrap's default constructor has been called!" << std::endl;
-	std::cout << "address of the clap trap ad : " << &this->_attack_damage << std::endl;
 }
 
 ClapTrap::ClapTrap( std::string name ) : _name(name), _hit_points(10), _energy_points(10), _attack_damage(0)

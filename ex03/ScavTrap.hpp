@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ymafaman <ymafaman@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mafia <mafia@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 02:53:23 by ymafaman          #+#    #+#             */
-/*   Updated: 2024/07/19 06:05:25 by ymafaman         ###   ########.fr       */
+/*   Updated: 2024/07/19 05:06:35 by mafia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ public :
 	ScavTrap( const ScavTrap& ref);
 
 	// Destructor
-	virtual ~ScavTrap(); // not necessary to make it virtual because it is already virtual in the base class
+	virtual ~ScavTrap();
 
 	// Assignment operator overload
 	ScavTrap&	operator=( const ScavTrap& rhs );
@@ -37,6 +37,18 @@ public :
 	void	attack( const std::string& target );
 	void	takeDamage( unsigned int amount );
 	void	beRepaired( unsigned int amount );
+
+	// Setters redefinition
+	void	set_name( std::string name );
+	void	set_hit_points( unsigned int hp );
+	void	set_energy_points( unsigned int energy_points );
+	void	set_attack_damage( unsigned int ad );
+
+	// Getters redefinition
+	std::string		get_name( void ) const;
+	unsigned int	get_hit_points( void ) const;
+	unsigned int	get_energy_points( void ) const;
+	unsigned int	get_attack_damage( void ) const;
 
 protected :
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ymafaman <ymafaman@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mafia <mafia@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 02:53:23 by ymafaman          #+#    #+#             */
-/*   Updated: 2024/07/19 05:17:47 by ymafaman         ###   ########.fr       */
+/*   Updated: 2024/07/19 05:06:17 by mafia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,17 @@ public :
 	void	takeDamage( unsigned int amount );
 	void	beRepaired( unsigned int amount );
 
-	// the getters and setters have to be redefined! // or maby even overriden 
+	// Setters redefinition
+	void	set_name( std::string name );
+	void	set_hit_points( unsigned int hp );
+	void	set_energy_points( unsigned int energy_points );
+	void	set_attack_damage( unsigned int ad );
+
+	// Getters redefinition
+	std::string		get_name( void ) const;
+	unsigned int	get_hit_points( void ) const;
+	unsigned int	get_energy_points( void ) const;
+	unsigned int	get_attack_damage( void ) const;
 
 protected :
 
