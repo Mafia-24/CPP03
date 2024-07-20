@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mafia <mafia@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ymafaman <ymafaman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 01:56:26 by ymafaman          #+#    #+#             */
-/*   Updated: 2024/07/19 04:21:12 by mafia            ###   ########.fr       */
+/*   Updated: 2024/07/20 04:21:56 by ymafaman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,20 @@
 int main()
 {
 	DiamondTrap d;
+	DiamondTrap p;
 
-	d.takeDamage(2);
-	// d.attack("gg");
+	std::cout << "before changing : " << d.ScavTrap::get_energy_points() << std::endl;
+	std::cout << "before changing : " << d.ClapTrap::get_energy_points() << std::endl;
+	d.ScavTrap::set_energy_points( 500 );
+	d.ClapTrap::set_energy_points( 800 );
+	std::cout << "after changing : " << d.ScavTrap::get_energy_points() << std::endl;
+	std::cout << "after changing : " << d.ClapTrap::get_energy_points() << std::endl;
 
-	// std::cout << d.get_hit_points() << std::endl;
-	// std::cout << d.get_energy_points() << std::endl;
-	// std::cout << d.get_attack_damage() << std::endl;
-	// std::cout << d.get_name() << std::endl;
+	p = d;
 	
+
+	std::cout << "before changing : " << p.ScavTrap::get_energy_points() << std::endl;
+	std::cout << "before changing : " << p.ClapTrap::get_energy_points() << std::endl;
+	std::cout << "after changing : " << p.ScavTrap::get_energy_points() << std::endl;
+	std::cout << "after changing : " << p.ClapTrap::get_energy_points() << std::endl;
 }

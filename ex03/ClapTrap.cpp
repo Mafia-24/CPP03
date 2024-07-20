@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mafia <mafia@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ymafaman <ymafaman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 00:52:48 by ymafaman          #+#    #+#             */
-/*   Updated: 2024/07/19 04:12:59 by mafia            ###   ########.fr       */
+/*   Updated: 2024/07/20 04:15:27 by ymafaman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,13 @@ ClapTrap::ClapTrap( const ClapTrap& ref)
 
 ClapTrap::~ClapTrap()
 {
-	// std::cout << "ClapTrap's destructor has been called!" << std::endl;
+	std::cout << "ClapTrap's destructor has been called!" << std::endl;
 }
 
 ClapTrap& ClapTrap::operator=( const ClapTrap& rhs )
 {
+	std::cout << "ClapTrap assignment operator has been called!" << std::endl;
+
 	if (this == &rhs)
 	{
 		return (*this);

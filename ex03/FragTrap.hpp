@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mafia <mafia@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ymafaman <ymafaman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 02:53:23 by ymafaman          #+#    #+#             */
-/*   Updated: 2024/07/19 05:06:17 by mafia            ###   ########.fr       */
+/*   Updated: 2024/07/19 23:00:43 by ymafaman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ public :
 	// Base class memeber functions overriding 
 	void	attack( const std::string& target );
 	void	takeDamage( unsigned int amount );
-	void	beRepaired( unsigned int amount );
+	void beRepaired( unsigned int const amount );
 
 	// Setters redefinition
 	void	set_name( std::string name );

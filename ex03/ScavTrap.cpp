@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mafia <mafia@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ymafaman <ymafaman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 03:16:35 by ymafaman          #+#    #+#             */
-/*   Updated: 2024/07/19 05:06:49 by mafia            ###   ########.fr       */
+/*   Updated: 2024/07/20 04:21:41 by ymafaman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,7 @@ ScavTrap::ScavTrap( std::string name ) : ClapTrap(name)
 
 ScavTrap::ScavTrap( const ScavTrap& ref) : ClapTrap(ref)
 {
-	this->_energy_points = ref._energy_points; // here we have two types of energie points one at the claptrap class and the other in this class.
-	//TODO : check if the claptrap's ep is changing correctly.
+	this->_energy_points = ref._energy_points;
 	std::cout << "ScavTrap's copy constructor has been called!" << std::endl;
 }
 
@@ -48,6 +47,8 @@ ScavTrap& ScavTrap::operator=( const ScavTrap& rhs )
 	{
 		return (*this);
 	}
+
+	ClapTrap::operator=( rhs );
 
 	this->_name = rhs.get_name();
 	this->_hit_points = rhs.get_hit_points();
@@ -110,42 +111,42 @@ void	ScavTrap::takeDamage( unsigned int amount )
 	std::cout << "ScavTrap " << this->_name << " takes " << amount << " damage. Current HP " << this->_hit_points << "." << std::endl;
 }
 
-void	ClapTrap::set_name( std::string name )
+void	ScavTrap::set_name( std::string name )
 {
 	this->_name = name;
 }
 
-void	ClapTrap::set_hit_points( unsigned int hp )
+void	ScavTrap::set_hit_points( unsigned int hp )
 {
 	this->_hit_points = hp;
 }
 
-void	ClapTrap::set_energy_points( unsigned int energy_points )
+void	ScavTrap::set_energy_points( unsigned int energy_points )
 {
 	this->_energy_points = energy_points;
 }
 
-void	ClapTrap::set_attack_damage( unsigned int ad )
+void	ScavTrap::set_attack_damage( unsigned int ad )
 {
 	this->_attack_damage = ad;
 }
 
-std::string	ClapTrap::get_name( void ) const
+std::string	ScavTrap::get_name( void ) const
 {
 	return (this->_name);
 }
 
-unsigned int	ClapTrap::get_hit_points( void ) const
+unsigned int	ScavTrap::get_hit_points( void ) const
 {
 	return (this->_hit_points);
 }
 
-unsigned int	ClapTrap::get_energy_points( void ) const
+unsigned int	ScavTrap::get_energy_points( void ) const
 {
 	return (this->_energy_points);
 }
 
-unsigned int	ClapTrap::get_attack_damage( void ) const
+unsigned int	ScavTrap::get_attack_damage( void ) const
 {
 	return (this->_attack_damage);
 }

@@ -6,7 +6,7 @@
 /*   By: ymafaman <ymafaman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 00:44:22 by ymafaman          #+#    #+#             */
-/*   Updated: 2024/07/19 05:02:08 by ymafaman         ###   ########.fr       */
+/*   Updated: 2024/07/20 03:55:14 by ymafaman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ public :
 	ClapTrap( void );
 	ClapTrap( std::string name );
 	ClapTrap( const ClapTrap& ref );
-	
+
 	// Destructor
 	virtual ~ClapTrap();
 
